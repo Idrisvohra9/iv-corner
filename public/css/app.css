@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  font-family: Arvo;
+}
+
+.logo{
+  display: block;
+  background-image: url(../assets/mainLogo.png);
+  width: 350px;
+  height: 350px;
+  background-size: contain;
+  filter: saturate(100px);
+}
