@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Database\Factories\PostFactory;
 
 class Post extends Model
 {
@@ -43,4 +45,8 @@ class Post extends Model
 	public function getFormattedDate(){
 		return $this->published_at->format("F jS Y");
 	}
+	protected static function newFactory(): Factory
+{
+    return PostFactory::new();
+}
 }

@@ -1,7 +1,8 @@
 <article class="flex flex-col shadow my-4">
     <!-- Article Image -->
     <a href="/{{ $article->slug }}" class="hover:opacity-75">
-        <img src="/storage/{{ $article->thumbnail }}">
+        <img
+            src="{{ str_contains($article->thumbnail, 'https') ? "$article->thumbnail" : "/storage/$article->thumbnail " }}" />
     </a>
     <div class="bg-white flex flex-col justify-start p-6">
         <div class="flex flex-row">

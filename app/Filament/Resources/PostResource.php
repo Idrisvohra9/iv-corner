@@ -40,8 +40,6 @@ class PostResource extends Resource
 						]),
 						Forms\Components\FileUpload::make('thumbnail')
 							->required()
-							->image()
-							->imageEditor()
 							->preserveFilenames(),
 						Section::make()
 							->schema([
